@@ -22,10 +22,11 @@ app.get('/', (req, res)  => {
         description: 'Test description'
     },
     {
-        title: 'Test2',
+        title: 'Test',
         createdAt: new Date(),
-        description: 'Test description 2'
+        description: 'Test description'
     }]
+
     res.render('articles/index', { articles: articles})
 
 })
