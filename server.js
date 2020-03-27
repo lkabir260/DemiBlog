@@ -15,8 +15,7 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false}))
 app.use(methodOverride('_method'))
 
-// app.get('/', (req,res)  => {
-//     res.send('Hello World')
+
 
 app.get('/', async (req, res)  => {
     const articles = await Article.find().sort({
@@ -29,4 +28,4 @@ app.get('/', async (req, res)  => {
 app.use('/articles', articleRouter)
 
 
-app.listen(5000)
+app.listen(3000)
